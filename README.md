@@ -1,1 +1,37 @@
-# etl-mysql-to-amazon-s3
+1. create virtual environment
+
+2. Install Requirements
+install python
+apache-airflow-providers-amazon
+install boto3
+install pymysql
+install apache-airflow
+install mysqlclient
+install apache-airflow-providers-mysql
+
+optional if cannot install mysqlclient :
+---LINUX---
+You may need to install the Python 3 and MySQL development headers and libraries like so:
+
+$ sudo apt-get install python3-dev default-libmysqlclient-dev build-essential # Debian / Ubuntu
+% sudo yum install python3-devel mysql-devel # Red Hat / CentOS
+
+Then you can install mysqlclient via pip now:
+
+$ pip install mysqlclient
+Customize build (POSIX)
+mysqlclient uses pkg-config --clfags --ldflags mysqlclient by default for finding compiler/linker flags.
+
+You can use MYSQLCLIENT_CFLAGS and MYSQLCLIENT_LDFLAGS environment variables to customize compiler/linker options.
+
+$ export MYSQLCLIENT_CFLAGS=`pkg-config mysqlclient --cflags`
+$ export MYSQLCLIENT_LDFLAGS=`pkg-config mysqlclient --libs`
+$ pip install mysqlclient
+
+3. Run airflow db init
+4. Run airflow scheduler
+5. Run airflow webserver
+6. Open Airflow with username and password to run the DAG “localhost:8090”
+7. Create Key on AWS
+8. Configure connection to AWS and MySQL on UI Airflow admin
+9. Move your DAGs to venv\lib\python3.10\site-packages\airflow\example_dags\mysql_to_s3_etl.py
