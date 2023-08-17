@@ -1,5 +1,5 @@
 {
-    "AWS_ACCESS_KEY_ID": "AKIAX2725MJDWEGU45SJ",
-    "AWS_SECRET_ACCESS_KEY": "gslPv4SKWsAkrp59zsm2fP6/zUaHdjEDhD8rkUxG",
+    "AWS_ACCESS_KEY_ID": "<your access key>",
+    "AWS_SECRET_ACCESS_KEY": "<your secret access key>",
     "S3_BUCKET": "ums-project"
 }
